@@ -49,7 +49,7 @@
             ClientSize = new Size(905, 510);
             Controls.Add(pictureBox1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Chrono Trigger Campfire";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
