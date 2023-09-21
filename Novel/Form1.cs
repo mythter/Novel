@@ -17,7 +17,7 @@ namespace Novel
             backPictureBox.Image = Properties.Resources.Scene_1;
             startLabel.Visible = false;
 
-            await Print("dfsfgsdfsdf k hkjl h ijh klj h jhkjhlkj h l\n ko jkjlhj j hkjhkjh lkh kjl", characterTextLabel);
+            await Print("dfsfgsdfsdf  hkjl h ijh klj h jhkjhlkj h l\n ko jkjlhj j hkjhkjh lkh kjl", characterTextLabel);
         }
 
         private async Task Print(string text, Label output)
