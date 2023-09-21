@@ -31,53 +31,105 @@ namespace Novel
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            pictureBox1 = new PictureBox();
+            backPictureBox = new PictureBox();
             startLabel = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            characterTextLabel = new Label();
+            bottomPanel = new Panel();
+            characterImagePicBox = new PictureBox();
+            BackgroudTextPicBox = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)backPictureBox).BeginInit();
+            bottomPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)characterImagePicBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BackgroudTextPicBox).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // backPictureBox
             // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = Properties.Resources.Title_Screen_Dark;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(899, 507);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            backPictureBox.Dock = DockStyle.Fill;
+            backPictureBox.Image = Properties.Resources.Title_Screen_Dark;
+            backPictureBox.Location = new Point(0, 0);
+            backPictureBox.Name = "backPictureBox";
+            backPictureBox.Size = new Size(899, 507);
+            backPictureBox.TabIndex = 0;
+            backPictureBox.TabStop = false;
             // 
             // startLabel
             // 
             startLabel.AutoSize = true;
             startLabel.BackColor = Color.Transparent;
-            startLabel.Font = new Font("ChronoType", 72F, FontStyle.Regular, GraphicsUnit.Point);
+            startLabel.Font = new Font("ChronoType", 40.2F, FontStyle.Regular, GraphicsUnit.Point);
             startLabel.ForeColor = SystemColors.Control;
-            startLabel.Location = new Point(316, 193);
+            startLabel.Location = new Point(374, 300);
             startLabel.Name = "startLabel";
-            startLabel.Size = new Size(266, 120);
+            startLabel.Size = new Size(150, 67);
             startLabel.TabIndex = 1;
             startLabel.Text = "Start";
-            startLabel.Click += label1_Click;
+            startLabel.Click += startLabel_Click;
+            // 
+            // characterTextLabel
+            // 
+            characterTextLabel.Dock = DockStyle.Right;
+            characterTextLabel.Location = new Point(125, 0);
+            characterTextLabel.Name = "characterTextLabel";
+            characterTextLabel.Size = new Size(475, 125);
+            characterTextLabel.TabIndex = 2;
+            characterTextLabel.Text = "label1";
+            // 
+            // bottomPanel
+            // 
+            bottomPanel.Controls.Add(characterImagePicBox);
+            bottomPanel.Controls.Add(characterTextLabel);
+            bottomPanel.Controls.Add(BackgroudTextPicBox);
+            bottomPanel.Location = new Point(151, 382);
+            bottomPanel.Name = "bottomPanel";
+            bottomPanel.Size = new Size(600, 125);
+            bottomPanel.TabIndex = 3;
+            bottomPanel.Visible = false;
+            // 
+            // characterImagePicBox
+            // 
+            characterImagePicBox.Dock = DockStyle.Left;
+            characterImagePicBox.Location = new Point(0, 0);
+            characterImagePicBox.Name = "characterImagePicBox";
+            characterImagePicBox.Size = new Size(125, 125);
+            characterImagePicBox.TabIndex = 3;
+            characterImagePicBox.TabStop = false;
+            // 
+            // BackgroudTextPicBox
+            // 
+            BackgroudTextPicBox.Dock = DockStyle.Fill;
+            BackgroudTextPicBox.Location = new Point(0, 0);
+            BackgroudTextPicBox.Name = "BackgroudTextPicBox";
+            BackgroudTextPicBox.Size = new Size(600, 125);
+            BackgroudTextPicBox.TabIndex = 4;
+            BackgroudTextPicBox.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(899, 507);
+            Controls.Add(bottomPanel);
             Controls.Add(startLabel);
-            Controls.Add(pictureBox1);
+            Controls.Add(backPictureBox);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Chrono Trigger Campfire";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)backPictureBox).EndInit();
+            bottomPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)characterImagePicBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BackgroudTextPicBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox backPictureBox;
         private Label startLabel;
+        private Label characterTextLabel;
+        private Panel bottomPanel;
+        private PictureBox characterImagePicBox;
+        private PictureBox BackgroudTextPicBox;
     }
 }
