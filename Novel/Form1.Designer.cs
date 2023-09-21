@@ -139,8 +139,11 @@ namespace Novel
             Controls.Add(bottomPanel);
             Controls.Add(startLabel);
             Controls.Add(backPictureBox);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Chrono Trigger Campfire";
             ((System.ComponentModel.ISupportInitialize)backPictureBox).EndInit();
             bottomPanel.ResumeLayout(false);
