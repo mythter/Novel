@@ -37,10 +37,14 @@ namespace Novel
             bottomPanel = new Panel();
             characterImagePicBox = new PictureBox();
             backgroudTextPicBox = new PictureBox();
+            leftPictureBox = new PictureBox();
+            rightPictureBox = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)backPictureBox).BeginInit();
             bottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)characterImagePicBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)backgroudTextPicBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)leftPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)rightPictureBox).BeginInit();
             SuspendLayout();
             // 
             // backPictureBox
@@ -70,9 +74,9 @@ namespace Novel
             // 
             characterTextLabel.Font = new Font("ChronoType", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             characterTextLabel.ForeColor = SystemColors.Control;
-            characterTextLabel.Location = new Point(125, 0);
+            characterTextLabel.Location = new Point(106, 0);
             characterTextLabel.Name = "characterTextLabel";
-            characterTextLabel.Size = new Size(475, 125);
+            characterTextLabel.Size = new Size(494, 125);
             characterTextLabel.TabIndex = 2;
             characterTextLabel.Text = "label1";
             characterTextLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -107,11 +111,31 @@ namespace Novel
             backgroudTextPicBox.TabIndex = 5;
             backgroudTextPicBox.TabStop = false;
             // 
+            // leftPictureBox
+            // 
+            leftPictureBox.Location = new Point(0, 100);
+            leftPictureBox.Name = "leftPictureBox";
+            leftPictureBox.Size = new Size(200, 500);
+            leftPictureBox.TabIndex = 4;
+            leftPictureBox.TabStop = false;
+            leftPictureBox.Visible = false;
+            // 
+            // rightPictureBox
+            // 
+            rightPictureBox.Location = new Point(801, 100);
+            rightPictureBox.Name = "rightPictureBox";
+            rightPictureBox.Size = new Size(200, 500);
+            rightPictureBox.TabIndex = 5;
+            rightPictureBox.TabStop = false;
+            rightPictureBox.Visible = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1000, 600);
+            Controls.Add(rightPictureBox);
+            Controls.Add(leftPictureBox);
             Controls.Add(bottomPanel);
             Controls.Add(startLabel);
             Controls.Add(backPictureBox);
@@ -122,6 +146,8 @@ namespace Novel
             bottomPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)characterImagePicBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)backgroudTextPicBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)leftPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)rightPictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -134,5 +160,7 @@ namespace Novel
         private Panel bottomPanel;
         private PictureBox characterImagePicBox;
         private PictureBox backgroudTextPicBox;
+        private PictureBox leftPictureBox;
+        private PictureBox rightPictureBox;
     }
 }
