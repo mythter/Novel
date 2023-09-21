@@ -36,20 +36,20 @@ namespace Novel
             characterTextLabel = new Label();
             bottomPanel = new Panel();
             characterImagePicBox = new PictureBox();
-            BackgroudTextPicBox = new PictureBox();
+            backgroudTextPicBox = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)backPictureBox).BeginInit();
             bottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)characterImagePicBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)BackgroudTextPicBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)backgroudTextPicBox).BeginInit();
             SuspendLayout();
             // 
             // backPictureBox
             // 
             backPictureBox.Dock = DockStyle.Fill;
-            backPictureBox.Image = Properties.Resources.Title_Screen_Dark;
+            backPictureBox.Image = Properties.Resources.Title_Screen_Normal;
             backPictureBox.Location = new Point(0, 0);
             backPictureBox.Name = "backPictureBox";
-            backPictureBox.Size = new Size(899, 507);
+            backPictureBox.Size = new Size(1000, 600);
             backPictureBox.TabIndex = 0;
             backPictureBox.TabStop = false;
             // 
@@ -59,7 +59,7 @@ namespace Novel
             startLabel.BackColor = Color.Transparent;
             startLabel.Font = new Font("ChronoType", 40.2F, FontStyle.Regular, GraphicsUnit.Point);
             startLabel.ForeColor = SystemColors.Control;
-            startLabel.Location = new Point(374, 300);
+            startLabel.Location = new Point(425, 341);
             startLabel.Name = "startLabel";
             startLabel.Size = new Size(150, 67);
             startLabel.TabIndex = 1;
@@ -68,19 +68,23 @@ namespace Novel
             // 
             // characterTextLabel
             // 
-            characterTextLabel.Dock = DockStyle.Right;
+            characterTextLabel.Font = new Font("ChronoType", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            characterTextLabel.ForeColor = SystemColors.Control;
             characterTextLabel.Location = new Point(125, 0);
             characterTextLabel.Name = "characterTextLabel";
             characterTextLabel.Size = new Size(475, 125);
             characterTextLabel.TabIndex = 2;
             characterTextLabel.Text = "label1";
+            characterTextLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // bottomPanel
             // 
+            bottomPanel.Anchor = AnchorStyles.Bottom;
+            bottomPanel.BackColor = Color.Transparent;
             bottomPanel.Controls.Add(characterImagePicBox);
             bottomPanel.Controls.Add(characterTextLabel);
-            bottomPanel.Controls.Add(BackgroudTextPicBox);
-            bottomPanel.Location = new Point(151, 382);
+            bottomPanel.Controls.Add(backgroudTextPicBox);
+            bottomPanel.Location = new Point(200, 475);
             bottomPanel.Name = "bottomPanel";
             bottomPanel.Size = new Size(600, 125);
             bottomPanel.TabIndex = 3;
@@ -88,27 +92,26 @@ namespace Novel
             // 
             // characterImagePicBox
             // 
-            characterImagePicBox.Dock = DockStyle.Left;
-            characterImagePicBox.Location = new Point(0, 0);
+            characterImagePicBox.Location = new Point(25, 25);
             characterImagePicBox.Name = "characterImagePicBox";
-            characterImagePicBox.Size = new Size(125, 125);
+            characterImagePicBox.Size = new Size(75, 75);
             characterImagePicBox.TabIndex = 3;
             characterImagePicBox.TabStop = false;
             // 
-            // BackgroudTextPicBox
+            // backgroudTextPicBox
             // 
-            BackgroudTextPicBox.Dock = DockStyle.Fill;
-            BackgroudTextPicBox.Location = new Point(0, 0);
-            BackgroudTextPicBox.Name = "BackgroudTextPicBox";
-            BackgroudTextPicBox.Size = new Size(600, 125);
-            BackgroudTextPicBox.TabIndex = 4;
-            BackgroudTextPicBox.TabStop = false;
+            backgroudTextPicBox.Image = Properties.Resources.background;
+            backgroudTextPicBox.Location = new Point(0, 0);
+            backgroudTextPicBox.Name = "backgroudTextPicBox";
+            backgroudTextPicBox.Size = new Size(600, 125);
+            backgroudTextPicBox.TabIndex = 5;
+            backgroudTextPicBox.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(899, 507);
+            ClientSize = new Size(1000, 600);
             Controls.Add(bottomPanel);
             Controls.Add(startLabel);
             Controls.Add(backPictureBox);
@@ -118,7 +121,7 @@ namespace Novel
             ((System.ComponentModel.ISupportInitialize)backPictureBox).EndInit();
             bottomPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)characterImagePicBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)BackgroudTextPicBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)backgroudTextPicBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -130,6 +133,6 @@ namespace Novel
         private Label characterTextLabel;
         private Panel bottomPanel;
         private PictureBox characterImagePicBox;
-        private PictureBox BackgroudTextPicBox;
+        private PictureBox backgroudTextPicBox;
     }
 }

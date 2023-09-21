@@ -83,6 +83,36 @@ namespace Novel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ayla_icon_Normal {
+            get {
+                object obj = ResourceManager.GetObject("Ayla_icon_Normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ayla_icon_Round {
+            get {
+                object obj = ResourceManager.GetObject("Ayla_icon_Round", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap background {
+            get {
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Crono {
             get {
                 object obj = ResourceManager.GetObject("Crono", resourceCulture);
@@ -96,6 +126,26 @@ namespace Novel.Properties {
         internal static System.Drawing.Bitmap Crono_icon {
             get {
                 object obj = ResourceManager.GetObject("Crono_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Crono_icon_Normal {
+            get {
+                object obj = ResourceManager.GetObject("Crono_icon_Normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Crono_icon_Round {
+            get {
+                object obj = ResourceManager.GetObject("Crono_icon_Round", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,6 +173,26 @@ namespace Novel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Frog_icon_Normal {
+            get {
+                object obj = ResourceManager.GetObject("Frog_icon_Normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frog_icon_Round {
+            get {
+                object obj = ResourceManager.GetObject("Frog_icon_Round", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lucca {
             get {
                 object obj = ResourceManager.GetObject("Lucca", resourceCulture);
@@ -136,6 +206,26 @@ namespace Novel.Properties {
         internal static System.Drawing.Bitmap Lucca_icon {
             get {
                 object obj = ResourceManager.GetObject("Lucca_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lucca_icon_Normal {
+            get {
+                object obj = ResourceManager.GetObject("Lucca_icon_Normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lucca_icon_Round {
+            get {
+                object obj = ResourceManager.GetObject("Lucca_icon_Round", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +253,26 @@ namespace Novel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Magus_icon_Normal {
+            get {
+                object obj = ResourceManager.GetObject("Magus_icon_Normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Magus_icon_Round {
+            get {
+                object obj = ResourceManager.GetObject("Magus_icon_Round", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap marle {
             get {
                 object obj = ResourceManager.GetObject("marle", resourceCulture);
@@ -176,6 +286,26 @@ namespace Novel.Properties {
         internal static System.Drawing.Bitmap marle_icon {
             get {
                 object obj = ResourceManager.GetObject("marle_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Marle_icon_Normal {
+            get {
+                object obj = ResourceManager.GetObject("Marle_icon_Normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Marle_icon_Round {
+            get {
+                object obj = ResourceManager.GetObject("Marle_icon_Round", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,6 +333,26 @@ namespace Novel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Robo_icon_Normal {
+            get {
+                object obj = ResourceManager.GetObject("Robo_icon_Normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Robo_icon_Round {
+            get {
+                object obj = ResourceManager.GetObject("Robo_icon_Round", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Scene_1 {
             get {
                 object obj = ResourceManager.GetObject("Scene_1", resourceCulture);
@@ -213,9 +363,29 @@ namespace Novel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Scene_1_Normal {
+            get {
+                object obj = ResourceManager.GetObject("Scene_1_Normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Scene_2 {
             get {
                 object obj = ResourceManager.GetObject("Scene_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Scene_2_Normal {
+            get {
+                object obj = ResourceManager.GetObject("Scene_2_Normal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +406,16 @@ namespace Novel.Properties {
         internal static System.Drawing.Bitmap Title_Screen_Dark {
             get {
                 object obj = ResourceManager.GetObject("Title_Screen_Dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Title_Screen_Normal {
+            get {
+                object obj = ResourceManager.GetObject("Title_Screen_Normal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
