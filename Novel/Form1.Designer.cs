@@ -38,7 +38,7 @@
             pictureBox1.Image = Properties.Resources.Title_Screen;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(905, 510);
+            pictureBox1.Size = new Size(899, 507);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -46,7 +46,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(905, 510);
+            ClientSize = new Size(899, 507);
             Controls.Add(pictureBox1);
             Name = "Form1";
             Text = "Chrono Trigger Campfire";
