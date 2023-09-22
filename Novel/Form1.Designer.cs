@@ -35,7 +35,7 @@ namespace Novel
             startLabel = new Label();
             characterTextLabel = new Label();
             bottomPanel = new Panel();
-            characterImagePicBox = new PictureBox();
+            characterIconPicBox = new PictureBox();
             backgroudTextPicBox = new PictureBox();
             leftPictureBox = new PictureBox();
             rightPictureBox = new PictureBox();
@@ -47,7 +47,7 @@ namespace Novel
             magusPointer = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)backPictureBox).BeginInit();
             bottomPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)characterImagePicBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)characterIconPicBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)backgroudTextPicBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)leftPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightPictureBox).BeginInit();
@@ -98,7 +98,7 @@ namespace Novel
             // 
             bottomPanel.Anchor = AnchorStyles.Bottom;
             bottomPanel.BackColor = Color.Transparent;
-            bottomPanel.Controls.Add(characterImagePicBox);
+            bottomPanel.Controls.Add(characterIconPicBox);
             bottomPanel.Controls.Add(characterTextLabel);
             bottomPanel.Controls.Add(backgroudTextPicBox);
             bottomPanel.Location = new Point(200, 475);
@@ -109,11 +109,11 @@ namespace Novel
             // 
             // characterImagePicBox
             // 
-            characterImagePicBox.Location = new Point(25, 25);
-            characterImagePicBox.Name = "characterImagePicBox";
-            characterImagePicBox.Size = new Size(75, 75);
-            characterImagePicBox.TabIndex = 3;
-            characterImagePicBox.TabStop = false;
+            characterIconPicBox.Location = new Point(25, 25);
+            characterIconPicBox.Name = "characterImagePicBox";
+            characterIconPicBox.Size = new Size(75, 75);
+            characterIconPicBox.TabIndex = 3;
+            characterIconPicBox.TabStop = false;
             // 
             // backgroudTextPicBox
             // 
@@ -239,7 +239,7 @@ namespace Novel
             Text = "Chrono Trigger Campfire";
             ((System.ComponentModel.ISupportInitialize)backPictureBox).EndInit();
             bottomPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)characterImagePicBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)characterIconPicBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)backgroudTextPicBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)leftPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)rightPictureBox).EndInit();
@@ -259,7 +259,7 @@ namespace Novel
         private Label startLabel;
         private Label characterTextLabel;
         private Panel bottomPanel;
-        private PictureBox characterImagePicBox;
+        private PictureBox characterIconPicBox;
         private PictureBox backgroudTextPicBox;
         private PictureBox leftPictureBox;
         private PictureBox rightPictureBox;

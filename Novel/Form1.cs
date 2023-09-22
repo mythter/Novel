@@ -15,6 +15,8 @@ namespace Novel
 
         int story = 0;
         string? character;
+        Bitmap? characterIcon;
+        Bitmap chronoIcon = Properties.Resources.Crono_icon_Round;
         bool animating = false;
 
         public Form1()
@@ -44,7 +46,7 @@ namespace Novel
             startLabel.Visible = false;
 
             bottomPanel.Visible = true;
-            characterImagePicBox.Image = Properties.Resources.Crono_icon_Round;
+            characterIconPicBox.Image = Properties.Resources.Crono_icon_Round;
 
             await StoryStep();
         }
@@ -69,7 +71,7 @@ namespace Novel
                 magusPointer.Visible = on;
                 aylaPointer.Visible  = on;
                 luccaPointer.Visible = on;
-                characterImagePicBox.Image = null;
+                characterIconPicBox.Image = null;
                 characterTextLabel.Text = "";
                 animating = true;
                 await Print("Choose character", characterTextLabel);
@@ -86,6 +88,7 @@ namespace Novel
                 aylaPointer.Visible  = off;
                 luccaPointer.Visible = off;
                 SetCharacterIcon();
+                characterIconPicBox.Image = characterIcon;
                 characterTextLabel.Text = "";
                 await PrintCharacterReply();
                 story++;
@@ -95,7 +98,7 @@ namespace Novel
                 characterTextLabel.Text = "";
                 backPictureBox.Image = Properties.Resources.Scene_2_Normal;
                 SetSideCharacters();
-                characterImagePicBox.Image = Properties.Resources.Crono_icon_Round;
+                characterIconPicBox.Image = chronoIcon;
                 await PrintCronoReply();
                 story++;
             }
@@ -108,7 +111,7 @@ namespace Novel
             else if (story == 5)
             {
                 characterTextLabel.Text = "";
-                characterImagePicBox.Image = Properties.Resources.Crono_icon_Round;
+                characterIconPicBox.Image = chronoIcon;
                 await PrintCronoReply();
                 story++;
             }
@@ -297,7 +300,7 @@ namespace Novel
                 _ => throw new ArgumentException("Character is not chosen."),
             };
             characterTextLabel.Text = "";
-            SetCharacterIcon();
+            characterIconPicBox.Image = characterIcon;
             animating = true;
             await printReply();
             animating = false;
@@ -397,13 +400,13 @@ namespace Novel
                 characterTextLabel.BackColor = Color.Transparent;
             }
 
-            if (characterImagePicBox?.Parent is not null)
+            if (characterIconPicBox?.Parent is not null)
             {
-                pos = characterImagePicBox.Parent.PointToScreen(characterImagePicBox.Location);
+                pos = characterIconPicBox.Parent.PointToScreen(characterIconPicBox.Location);
                 pos = backgroudTextPicBox.PointToClient(pos);
-                characterImagePicBox.Parent = backgroudTextPicBox;
-                characterImagePicBox.Location = pos;
-                characterImagePicBox.BackColor = Color.Transparent;
+                characterIconPicBox.Parent = backgroudTextPicBox;
+                characterIconPicBox.Location = pos;
+                characterIconPicBox.BackColor = Color.Transparent;
             }
 
             if (leftPictureBox?.Parent is not null)
@@ -484,22 +487,22 @@ namespace Novel
             switch (character)
             {
                 case "Magus":
-                    characterImagePicBox.Image = Properties.Resources.Magus_icon_Round;
+                    characterIcon = Properties.Resources.Magus_icon_Round;
                     break;
                 case "Frog":
-                    characterImagePicBox.Image = Properties.Resources.Frog_icon_Round;
+                    characterIcon = Properties.Resources.Frog_icon_Round;
                     break;
                 case "Lucca":
-                    characterImagePicBox.Image = Properties.Resources.Lucca_icon_Round;
+                    characterIcon = Properties.Resources.Lucca_icon_Round;
                     break;
                 case "Marle":
-                    characterImagePicBox.Image = Properties.Resources.Marle_icon_Round;
+                    characterIcon = Properties.Resources.Marle_icon_Round;
                     break;
                 case "Robo":
-                    characterImagePicBox.Image = Properties.Resources.Robo_icon_Round;
+                    characterIcon = Properties.Resources.Robo_icon_Round;
                     break;
                 case "Ayla":
-                    characterImagePicBox.Image = Properties.Resources.Ayla_icon_Round;
+                    characterIcon = Properties.Resources.Ayla_icon_Round;
                     break;
             }
         }
