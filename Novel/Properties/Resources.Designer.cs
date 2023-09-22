@@ -103,10 +103,40 @@ namespace Novel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ayla_left {
+            get {
+                object obj = ResourceManager.GetObject("Ayla_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ayla_right {
+            get {
+                object obj = ResourceManager.GetObject("Ayla_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background {
             get {
                 object obj = ResourceManager.GetObject("background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ChronoType {
+            get {
+                object obj = ResourceManager.GetObject("ChronoType", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -146,6 +176,26 @@ namespace Novel.Properties {
         internal static System.Drawing.Bitmap Crono_icon_Round {
             get {
                 object obj = ResourceManager.GetObject("Crono_icon_Round", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Crono_left {
+            get {
+                object obj = ResourceManager.GetObject("Crono_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Crono_right {
+            get {
+                object obj = ResourceManager.GetObject("Crono_right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +243,26 @@ namespace Novel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Frog_left {
+            get {
+                object obj = ResourceManager.GetObject("Frog_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frog_right {
+            get {
+                object obj = ResourceManager.GetObject("Frog_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lucca {
             get {
                 object obj = ResourceManager.GetObject("Lucca", resourceCulture);
@@ -226,6 +296,26 @@ namespace Novel.Properties {
         internal static System.Drawing.Bitmap Lucca_icon_Round {
             get {
                 object obj = ResourceManager.GetObject("Lucca_icon_Round", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lucca_left {
+            get {
+                object obj = ResourceManager.GetObject("Lucca_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lucca_right {
+            get {
+                object obj = ResourceManager.GetObject("Lucca_right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,6 +363,26 @@ namespace Novel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Magus_left {
+            get {
+                object obj = ResourceManager.GetObject("Magus_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Magus_right {
+            get {
+                object obj = ResourceManager.GetObject("Magus_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap marle {
             get {
                 object obj = ResourceManager.GetObject("marle", resourceCulture);
@@ -313,6 +423,36 @@ namespace Novel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap marle_left {
+            get {
+                object obj = ResourceManager.GetObject("marle_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap marle_right {
+            get {
+                object obj = ResourceManager.GetObject("marle_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pointer {
+            get {
+                object obj = ResourceManager.GetObject("pointer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Robo {
             get {
                 object obj = ResourceManager.GetObject("Robo", resourceCulture);
@@ -346,6 +486,26 @@ namespace Novel.Properties {
         internal static System.Drawing.Bitmap Robo_icon_Round {
             get {
                 object obj = ResourceManager.GetObject("Robo_icon_Round", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Robo_left {
+            get {
+                object obj = ResourceManager.GetObject("Robo_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Robo_right {
+            get {
+                object obj = ResourceManager.GetObject("Robo_right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

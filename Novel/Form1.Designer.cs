@@ -39,12 +39,24 @@ namespace Novel
             backgroudTextPicBox = new PictureBox();
             leftPictureBox = new PictureBox();
             rightPictureBox = new PictureBox();
+            roboPointer = new PictureBox();
+            luccaPointer = new PictureBox();
+            frogPointer = new PictureBox();
+            marlePointer = new PictureBox();
+            aylaPointer = new PictureBox();
+            magusPointer = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)backPictureBox).BeginInit();
             bottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)characterImagePicBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)backgroudTextPicBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)leftPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)roboPointer).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)luccaPointer).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)frogPointer).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)marlePointer).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)aylaPointer).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)magusPointer).BeginInit();
             SuspendLayout();
             // 
             // backPictureBox
@@ -56,6 +68,7 @@ namespace Novel
             backPictureBox.Size = new Size(1000, 600);
             backPictureBox.TabIndex = 0;
             backPictureBox.TabStop = false;
+            backPictureBox.Click += backPictureBox_Click;
             // 
             // startLabel
             // 
@@ -76,9 +89,9 @@ namespace Novel
             characterTextLabel.ForeColor = SystemColors.Control;
             characterTextLabel.Location = new Point(106, 0);
             characterTextLabel.Name = "characterTextLabel";
+            characterTextLabel.Padding = new Padding(10, 0, 10, 0);
             characterTextLabel.Size = new Size(494, 125);
             characterTextLabel.TabIndex = 2;
-            characterTextLabel.Text = "label1";
             characterTextLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // bottomPanel
@@ -122,18 +135,97 @@ namespace Novel
             // 
             // rightPictureBox
             // 
-            rightPictureBox.Location = new Point(801, 100);
+            rightPictureBox.BackColor = Color.Transparent;
+            rightPictureBox.Location = new Point(800, 100);
             rightPictureBox.Name = "rightPictureBox";
             rightPictureBox.Size = new Size(200, 500);
             rightPictureBox.TabIndex = 5;
             rightPictureBox.TabStop = false;
             rightPictureBox.Visible = false;
             // 
+            // roboPointer
+            // 
+            roboPointer.Image = Properties.Resources.pointer;
+            roboPointer.Location = new Point(501, 144);
+            roboPointer.Name = "roboPointer";
+            roboPointer.Size = new Size(20, 20);
+            roboPointer.TabIndex = 6;
+            roboPointer.TabStop = false;
+            roboPointer.Tag = "Robo";
+            roboPointer.Visible = false;
+            roboPointer.Click += CharacterPointer_Click;
+            // 
+            // luccaPointer
+            // 
+            luccaPointer.Image = Properties.Resources.pointer;
+            luccaPointer.Location = new Point(569, 179);
+            luccaPointer.Name = "luccaPointer";
+            luccaPointer.Size = new Size(20, 20);
+            luccaPointer.TabIndex = 7;
+            luccaPointer.TabStop = false;
+            luccaPointer.Tag = "Lucca";
+            luccaPointer.Visible = false;
+            luccaPointer.Click += CharacterPointer_Click;
+            // 
+            // frogPointer
+            // 
+            frogPointer.Image = Properties.Resources.pointer;
+            frogPointer.Location = new Point(329, 244);
+            frogPointer.Name = "frogPointer";
+            frogPointer.Size = new Size(20, 20);
+            frogPointer.TabIndex = 8;
+            frogPointer.TabStop = false;
+            frogPointer.Tag = "Frog";
+            frogPointer.Visible = false;
+            frogPointer.Click += CharacterPointer_Click;
+            // 
+            // marlePointer
+            // 
+            marlePointer.Image = Properties.Resources.pointer;
+            marlePointer.Location = new Point(338, 375);
+            marlePointer.Name = "marlePointer";
+            marlePointer.Size = new Size(20, 20);
+            marlePointer.TabIndex = 9;
+            marlePointer.TabStop = false;
+            marlePointer.Tag = "Marle";
+            marlePointer.Visible = false;
+            marlePointer.Click += CharacterPointer_Click;
+            // 
+            // aylaPointer
+            // 
+            aylaPointer.Image = Properties.Resources.pointer;
+            aylaPointer.Location = new Point(680, 244);
+            aylaPointer.Name = "aylaPointer";
+            aylaPointer.Size = new Size(20, 20);
+            aylaPointer.TabIndex = 10;
+            aylaPointer.TabStop = false;
+            aylaPointer.Tag = "Ayla";
+            aylaPointer.Visible = false;
+            aylaPointer.Click += CharacterPointer_Click;
+            // 
+            // magusPointer
+            // 
+            magusPointer.Image = Properties.Resources.pointer;
+            magusPointer.Location = new Point(856, 270);
+            magusPointer.Name = "magusPointer";
+            magusPointer.Size = new Size(20, 20);
+            magusPointer.TabIndex = 11;
+            magusPointer.TabStop = false;
+            magusPointer.Tag = "Magus";
+            magusPointer.Visible = false;
+            magusPointer.Click += CharacterPointer_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1000, 600);
+            Controls.Add(magusPointer);
+            Controls.Add(aylaPointer);
+            Controls.Add(marlePointer);
+            Controls.Add(frogPointer);
+            Controls.Add(luccaPointer);
+            Controls.Add(roboPointer);
             Controls.Add(rightPictureBox);
             Controls.Add(leftPictureBox);
             Controls.Add(bottomPanel);
@@ -151,6 +243,12 @@ namespace Novel
             ((System.ComponentModel.ISupportInitialize)backgroudTextPicBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)leftPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)rightPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)roboPointer).EndInit();
+            ((System.ComponentModel.ISupportInitialize)luccaPointer).EndInit();
+            ((System.ComponentModel.ISupportInitialize)frogPointer).EndInit();
+            ((System.ComponentModel.ISupportInitialize)marlePointer).EndInit();
+            ((System.ComponentModel.ISupportInitialize)aylaPointer).EndInit();
+            ((System.ComponentModel.ISupportInitialize)magusPointer).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -165,5 +263,11 @@ namespace Novel
         private PictureBox backgroudTextPicBox;
         private PictureBox leftPictureBox;
         private PictureBox rightPictureBox;
+        private PictureBox roboPointer;
+        private PictureBox luccaPointer;
+        private PictureBox frogPointer;
+        private PictureBox marlePointer;
+        private PictureBox aylaPointer;
+        private PictureBox magusPointer;
     }
 }

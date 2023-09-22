@@ -130,8 +130,17 @@
   <data name="Ayla_icon_Round" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ayla icon Round.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Ayla_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ayla_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ayla_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ayla_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChronoType" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChronoType.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Crono" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Crono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,6 +154,12 @@
   <data name="Crono_icon_Round" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Crono icon Round.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Crono_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crono_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Crono_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crono_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Frog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,6 +171,12 @@
   </data>
   <data name="Frog_icon_Round" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frog icon Round.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Frog_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Frog_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Frog_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Frog_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Lucca" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lucca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,6 +190,12 @@
   <data name="Lucca_icon_Round" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lucca icon Round.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Lucca_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucca_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lucca_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lucca_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Magus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Magus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -180,6 +207,12 @@
   </data>
   <data name="Magus_icon_Round" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Magus icon Round.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Magus_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Magus_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Magus_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Magus_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="marle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\marle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,6 +226,15 @@
   <data name="Marle_icon_Round" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Marle icon Round.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="marle_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marle_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marle_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marle_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pointer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pointer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Robo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Robo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -204,6 +246,12 @@
   </data>
   <data name="Robo_icon_Round" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Robo icon Round.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Robo_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Robo_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Robo_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Robo_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Scene_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Scene 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
