@@ -15,8 +15,10 @@ namespace Novel
 
         int story = 0;
         string? character;
-        Bitmap? characterIcon;
         Bitmap chronoIcon = Properties.Resources.Crono_icon_Round;
+        Bitmap? characterIcon;
+        Bitmap? leftcharacterImage;
+        Bitmap? rightcharacterImage;
         bool animating = false;
 
         public Form1()
@@ -58,7 +60,6 @@ namespace Novel
 
             if (story == 0)
             {
-                characterTextLabel.Text = "";
                 await PrintCronoReply();
                 story++;
             }
@@ -72,7 +73,6 @@ namespace Novel
                 aylaPointer.Visible  = on;
                 luccaPointer.Visible = on;
                 characterIconPicBox.Image = null;
-                characterTextLabel.Text = "";
                 animating = true;
                 await Print("Choose character", characterTextLabel);
                 animating = false;
@@ -87,107 +87,34 @@ namespace Novel
                 magusPointer.Visible = off;
                 aylaPointer.Visible  = off;
                 luccaPointer.Visible = off;
-                SetCharacterIcon();
+                SetCharacterImages();
                 characterIconPicBox.Image = characterIcon;
-                characterTextLabel.Text = "";
                 await PrintCharacterReply();
                 story++;
             }
             else if (story == 3)
             {
-                characterTextLabel.Text = "";
                 backPictureBox.Image = Properties.Resources.Scene_2_Normal;
                 SetSideCharacters();
                 characterIconPicBox.Image = chronoIcon;
                 await PrintCronoReply();
                 story++;
             }
-            else if (story == 4)
+            else if (story == 4 || story == 6)
             {
-                characterTextLabel.Text = "";
                 await PrintCharacterReply();
                 story++;
             }
             else if (story == 5)
             {
-                characterTextLabel.Text = "";
                 characterIconPicBox.Image = chronoIcon;
                 await PrintCronoReply();
-                story++;
-            }
-            else if (story == 6)
-            {
-                characterTextLabel.Text = "";
-                animating = true;
-                await PrintCharacterReply();
-                animating = false;
                 story++;
             }
             else if (story == 7)
             {
                 story = 0;
                 SetStartScreen();
-            }
-        }
-
-        private void SetStartScreen()
-        {
-            rightPictureBox.Visible = false;
-            leftPictureBox.Visible = false;
-            bottomPanel.Visible = false;
-            backPictureBox.Image = Properties.Resources.Title_Screen_Normal;
-            startLabel.Visible = true;
-        }
-
-        private void SetSideCharacters()
-        {
-            Random rand = new Random();
-            rightPictureBox.Visible = true;
-            leftPictureBox.Visible = true;
-            int choice = rand.Next(2);
-            if (choice == 0)
-                leftPictureBox.Image = Properties.Resources.Crono_left;
-            else
-                rightPictureBox.Image = Properties.Resources.Crono_right;
-
-            switch (character)
-            {
-                case "Magus":
-                    if (choice == 0)
-                        rightPictureBox.Image = Properties.Resources.Magus_right;
-                    else
-                        leftPictureBox.Image = Properties.Resources.Magus_left;
-                    break;
-                case "Frog":
-                    if (choice == 0)
-                        rightPictureBox.Image = Properties.Resources.Frog_right;
-                    else
-                        leftPictureBox.Image = Properties.Resources.Frog_left;
-                    break;
-                case "Lucca":
-                    if (choice == 0)
-                        rightPictureBox.Image = Properties.Resources.Lucca_right;
-                    else
-                        leftPictureBox.Image = Properties.Resources.Lucca_left;
-                    break;
-                case "Marle":
-                    if (choice == 0)
-                        rightPictureBox.Image = Properties.Resources.marle_right;
-                    else
-                        leftPictureBox.Image = Properties.Resources.marle_left;
-                    break;
-                case "Robo":
-                    if (choice == 0)
-                        rightPictureBox.Image = Properties.Resources.Robo_right;
-                    else
-                        leftPictureBox.Image = Properties.Resources.Robo_left;
-                    break;
-                case "Ayla":
-                    if (choice == 0)
-                        rightPictureBox.Image = Properties.Resources.Ayla_right;
-                    else
-                        leftPictureBox.Image = Properties.Resources.Ayla_left;
-                    break;
             }
         }
 
@@ -299,7 +226,6 @@ namespace Novel
                 "Ayla" => PrintAylaReply,
                 _ => throw new ArgumentException("Character is not chosen."),
             };
-            characterTextLabel.Text = "";
             characterIconPicBox.Image = characterIcon;
             animating = true;
             await printReply();
@@ -308,7 +234,6 @@ namespace Novel
 
         private async Task PrintCronoReply()
         {
-            characterTextLabel.Text = "";
             animating = true;
             if (story == 0)
             {
@@ -351,6 +276,7 @@ namespace Novel
             if (output is null)
                 return;
 
+            output.Text = "";
             foreach (var ch in text)
             {
                 output.Text += ch;
@@ -367,6 +293,54 @@ namespace Novel
         {
             character = (sender as PictureBox)?.Tag?.ToString();
             await StoryStep();
+        }
+
+        private void SetSideCharacters()
+        {
+            Random rand = new Random();
+            rightPictureBox.Visible = true;
+            leftPictureBox.Visible = true;
+            int choice = rand.Next(2);
+
+            leftPictureBox.Image = choice == 0 ? Properties.Resources.Crono_left : leftcharacterImage;
+            rightPictureBox.Image = choice == 0 ? rightcharacterImage : Properties.Resources.Crono_right;
+        }
+
+        private void SetCharacterImages()
+        {
+            switch (character)
+            {
+                case "Magus":
+                    characterIcon = Properties.Resources.Magus_icon_Round;
+                    leftcharacterImage = Properties.Resources.Magus_left;
+                    rightcharacterImage = Properties.Resources.Magus_right;
+                    break;
+                case "Frog":
+                    characterIcon = Properties.Resources.Frog_icon_Round;
+                    leftcharacterImage = Properties.Resources.Frog_left;
+                    rightcharacterImage = Properties.Resources.Frog_right;
+                    break;
+                case "Lucca":
+                    characterIcon = Properties.Resources.Lucca_icon_Round;
+                    leftcharacterImage = Properties.Resources.Lucca_left;
+                    rightcharacterImage = Properties.Resources.Lucca_right;
+                    break;
+                case "Marle":
+                    characterIcon = Properties.Resources.Marle_icon_Round;
+                    leftcharacterImage = Properties.Resources.Marle_left;
+                    rightcharacterImage = Properties.Resources.Marle_right;
+                    break;
+                case "Robo":
+                    characterIcon = Properties.Resources.Robo_icon_Round;
+                    leftcharacterImage = Properties.Resources.Robo_left;
+                    rightcharacterImage = Properties.Resources.Robo_right;
+                    break;
+                case "Ayla":
+                    characterIcon = Properties.Resources.Ayla_icon_Round;
+                    leftcharacterImage = Properties.Resources.Ayla_left;
+                    rightcharacterImage = Properties.Resources.Ayla_right;
+                    break;
+            }
         }
 
         private void SetTransperency()
@@ -482,29 +456,13 @@ namespace Novel
             }
         }
 
-        private void SetCharacterIcon()
+        private void SetStartScreen()
         {
-            switch (character)
-            {
-                case "Magus":
-                    characterIcon = Properties.Resources.Magus_icon_Round;
-                    break;
-                case "Frog":
-                    characterIcon = Properties.Resources.Frog_icon_Round;
-                    break;
-                case "Lucca":
-                    characterIcon = Properties.Resources.Lucca_icon_Round;
-                    break;
-                case "Marle":
-                    characterIcon = Properties.Resources.Marle_icon_Round;
-                    break;
-                case "Robo":
-                    characterIcon = Properties.Resources.Robo_icon_Round;
-                    break;
-                case "Ayla":
-                    characterIcon = Properties.Resources.Ayla_icon_Round;
-                    break;
-            }
+            rightPictureBox.Visible = false;
+            leftPictureBox.Visible = false;
+            bottomPanel.Visible = false;
+            backPictureBox.Image = Properties.Resources.Title_Screen_Normal;
+            startLabel.Visible = true;
         }
     }
 }

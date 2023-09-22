@@ -383,9 +383,9 @@ namespace Novel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap marle {
+        internal static System.Drawing.Bitmap Marle {
             get {
-                object obj = ResourceManager.GetObject("marle", resourceCulture);
+                object obj = ResourceManager.GetObject("Marle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,9 +393,9 @@ namespace Novel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap marle_icon {
+        internal static System.Drawing.Bitmap Marle_icon {
             get {
-                object obj = ResourceManager.GetObject("marle_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("Marle_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,9 +423,9 @@ namespace Novel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap marle_left {
+        internal static System.Drawing.Bitmap Marle_left {
             get {
-                object obj = ResourceManager.GetObject("marle_left", resourceCulture);
+                object obj = ResourceManager.GetObject("Marle_left", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,9 +433,9 @@ namespace Novel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap marle_right {
+        internal static System.Drawing.Bitmap Marle_right {
             get {
-                object obj = ResourceManager.GetObject("marle_right", resourceCulture);
+                object obj = ResourceManager.GetObject("Marle_right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
