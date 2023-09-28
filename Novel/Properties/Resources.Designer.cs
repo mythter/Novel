@@ -122,6 +122,8 @@ namespace Novel.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to Ayla: Ayla wood go
+        ///Ayla: Ayla fight, Ayla live, no fight, no live
+        ///Ayla: Crono right
         ///Ayla: Ayla go home, Ayla eat, Ayla sleep, Ayla marry Kino, Ayla happy
         ///Ayla: Ayla thank Crono, Ayla go back.
         /// </summary>
@@ -212,8 +214,10 @@ namespace Novel.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Crono: Hey Ayla, what you plan to do when we finish with Lavos?
-        ///Crono: Haha, That`s great.
+        ///   Looks up a localized string similar to Crono: Hey Ayla, how you became so strong?
+        ///Crono: Yeah, I guess you&apos;re right, with Reptite you can&apos;t relax a day
+        ///Crono: What you plan to do when we finish with Lavos?
+        ///Crono: Haha, That&apos;s great.
         /// </summary>
         internal static string CronoAylaReply {
             get {
@@ -222,8 +226,10 @@ namespace Novel.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Crono: Hey Frog, what you plan to do when we finish with Lavos?
-        ///Crono: I am glad that you have forgiven yourself and can live your life without regrets.
+        ///   Looks up a localized string similar to Crono: Hey Frog, I thanks for those sword lessons, I fell stronger than before
+        ///Crono: Thanks, what you plan to do when we finish with Lavos?
+        ///Crono: I am glad that you have forgiven yourself and can live your life without regrets
+        ///Crono: You`re exaggerating, but thanks and let`s go back.
         /// </summary>
         internal static string CronoFrogReply {
             get {
@@ -232,7 +238,9 @@ namespace Novel.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Crono: Hey Lucca, what you plan to do when we finish with Lavos?
+        ///   Looks up a localized string similar to Crono: Hey Lucca, how is the creation of the armor we talked about?
+        ///Crono: That&apos;s nice, can&apos;t wait to see it
+        ///Crono: What you plan to do when we finish with Lavos?
         ///Crono: That&apos;s nice, I&apos;ll be looking for it.
         /// </summary>
         internal static string CronoLuccaReply {
@@ -242,8 +250,10 @@ namespace Novel.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Crono: Hey Magus, what you plan to do when we finish with Lavos?
-        ///Crono: I see, hope it&apos;ll be okay without Lavosthat screwed up your mother.
+        ///   Looks up a localized string similar to Crono: Hey Magus, are you alright? It seems like something is bothering you
+        ///Crono: Sometimes I also think about it, but I guess there is only one way to find out
+        ///Crono: Magus what you plan to do when we finish with Lavos?
+        ///Crono: I know it&apos;ll be okay without Lavos that screwed up your mother.
         /// </summary>
         internal static string CronoMagusReply {
             get {
@@ -252,7 +262,9 @@ namespace Novel.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Crono: Hey Marle, what you plan to do when we finish with Lavos?
+        ///   Looks up a localized string similar to Crono: Hey Marle, thanks for the stew, it was delicious
+        ///Crono: Can you teach me how to make it?
+        ///Crono: Hey, what you plan to do when we finish with Lavos?
         ///Crono: That&apos;s nice, I can&apos;t wait to see my mom again too.
         /// </summary>
         internal static string CronoMarleReply {
@@ -271,7 +283,9 @@ namespace Novel.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Crono: Hey Rob, what you plan to do when we finish with Lavos?
+        ///   Looks up a localized string similar to Crono: Hey Robo, how is your new hand that Lucca made?
+        ///Crono: That&apos;s nice, Lucca is happy that you like it
+        ///Crono: Robo, what you plan to do when we finish with Lavos?
         ///Crono: I believe it will be good.
         /// </summary>
         internal static string CronoRoboReply {
@@ -342,12 +356,34 @@ namespace Novel.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to Frog: Let&apos;s go Crono
+        ///Frog: No need to thank me, I only help you with technique, you was strong before that
         ///Frog: I will return to my time and serve my kingdom as Cyrus did
-        ///Frog: Thanks Crono, you became an amazing swordsman and let&apos;s go back we got what we came for.
+        ///Frog: All thanks to you, and remember there are few swordsman like you. and let&apos;s go back we got what we came for
+        ///Frog: Yeah let`s go.
         /// </summary>
         internal static string FrogReply {
             get {
                 return ResourceManager.GetString("FrogReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon {
+            get {
+                object obj = ResourceManager.GetObject("Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Icon1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -413,6 +449,8 @@ namespace Novel.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to Lucca: Let&apos;s go Crono
+        ///Lucca: Is fine, I think I&apos;ll finish soon
+        ///Lucca: Hope it will fit you well
         ///Lucca: When we will return to our time, I will keep inventing stuff with my dad to help people 
         ///Lucca: Thanks Crono, hope I will get some from you with them and let&apos;s go back, we got what we needed.
         /// </summary>
@@ -484,8 +522,10 @@ namespace Novel.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to Magus: Let&apos;s go Crono
+        ///Magus: Thanks for worrying, but everything is fine, I just think what awaits us when we defeat Lavos
+        ///Magus: You right
         ///Magus: I plan to return in my time and see what will happen to Kingdom of Zeal
-        ///Magus: Thanks Crono, let&apos;s go back.
+        ///Magus: Thanks Crono, I appreciate it  and let&apos;s go back.
         /// </summary>
         internal static string MagusReply {
             get {
@@ -555,8 +595,10 @@ namespace Novel.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to Marle: Let&apos;s go Crono
+        ///Marle: Thanks, I am glad that you liked it
+        ///Marle: Of course, I will teach you everything I know, and hope you do the same for me
         ///Marle: I want to talk with my father about our adventure and so much more, I need some time to think about it
-        ///Marle: I don&apos;t know that you were a moms&apos; boy,  everyone is waiting, so let&apos;s go back.
+        ///Marle: I don&apos;t know that you were a moms&apos; boy, everyone is waiting, so let&apos;s go back.
         /// </summary>
         internal static string MarleReply {
             get {
@@ -636,6 +678,8 @@ namespace Novel.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to Robo: Let&apos;s go Crono
+        ///Robo: It&apos;s hard, strong and light, with it, I can fight more efficiently
+        ///Robo: If Lucca is happy, so and I
         ///Robo: I want to see how future will change after Lavos death
         ///Robo: Thanks Crono, you are saver of time and let&apos;s go back.
         /// </summary>
