@@ -121,6 +121,17 @@ namespace Novel.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ayla: Ayla wood go
+        ///Ayla: Ayla go home, Ayla eat, Ayla sleep, Ayla marry Kino, Ayla happy
+        ///Ayla: Ayla thank Crono, Ayla go back.
+        /// </summary>
+        internal static string AylaReply {
+            get {
+                return ResourceManager.GetString("AylaReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap background {
@@ -201,6 +212,75 @@ namespace Novel.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Crono: Hey Ayla, what you plan to do when we finish with Lavos?
+        ///Crono: Haha, That`s great.
+        /// </summary>
+        internal static string CronoAylaReply {
+            get {
+                return ResourceManager.GetString("CronoAylaReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crono: Hey Frog, what you plan to do when we finish with Lavos?
+        ///Crono: I am glad that you have forgiven yourself and can live your life without regrets.
+        /// </summary>
+        internal static string CronoFrogReply {
+            get {
+                return ResourceManager.GetString("CronoFrogReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crono: Hey Lucca, what you plan to do when we finish with Lavos?
+        ///Crono: That&apos;s nice, I&apos;ll be looking for it.
+        /// </summary>
+        internal static string CronoLuccaReply {
+            get {
+                return ResourceManager.GetString("CronoLuccaReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crono: Hey Magus, what you plan to do when we finish with Lavos?
+        ///Crono: I see, hope it&apos;ll be okay without Lavosthat screwed up your mother.
+        /// </summary>
+        internal static string CronoMagusReply {
+            get {
+                return ResourceManager.GetString("CronoMagusReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crono: Hey Marle, what you plan to do when we finish with Lavos?
+        ///Crono: That&apos;s nice, I can&apos;t wait to see my mom again too.
+        /// </summary>
+        internal static string CronoMarleReply {
+            get {
+                return ResourceManager.GetString("CronoMarleReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crono: I&apos;ll go gather some wood for a campfire, who wants to come with me?.
+        /// </summary>
+        internal static string CronoReply {
+            get {
+                return ResourceManager.GetString("CronoReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crono: Hey Rob, what you plan to do when we finish with Lavos?
+        ///Crono: I believe it will be good.
+        /// </summary>
+        internal static string CronoRoboReply {
+            get {
+                return ResourceManager.GetString("CronoRoboReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Frog {
@@ -257,6 +337,17 @@ namespace Novel.Properties {
             get {
                 object obj = ResourceManager.GetObject("Frog_right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frog: Let&apos;s go Crono
+        ///Frog: I will return to my time and serve my kingdom as Cyrus did
+        ///Frog: Thanks Crono, you became an amazing swordsman and let&apos;s go back we got what we came for.
+        /// </summary>
+        internal static string FrogReply {
+            get {
+                return ResourceManager.GetString("FrogReply", resourceCulture);
             }
         }
         
@@ -321,6 +412,17 @@ namespace Novel.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Lucca: Let&apos;s go Crono
+        ///Lucca: When we will return to our time, I will keep inventing stuff with my dad to help people 
+        ///Lucca: Thanks Crono, hope I will get some from you with them and let&apos;s go back, we got what we needed.
+        /// </summary>
+        internal static string LuccaReply {
+            get {
+                return ResourceManager.GetString("LuccaReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Magus {
@@ -381,6 +483,17 @@ namespace Novel.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Magus: Let&apos;s go Crono
+        ///Magus: I plan to return in my time and see what will happen to Kingdom of Zeal
+        ///Magus: Thanks Crono, let&apos;s go back.
+        /// </summary>
+        internal static string MagusReply {
+            get {
+                return ResourceManager.GetString("MagusReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Marle {
@@ -437,6 +550,17 @@ namespace Novel.Properties {
             get {
                 object obj = ResourceManager.GetObject("Marle_right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marle: Let&apos;s go Crono
+        ///Marle: I want to talk with my father about our adventure and so much more, I need some time to think about it
+        ///Marle: I don&apos;t know that you were a moms&apos; boy,  everyone is waiting, so let&apos;s go back.
+        /// </summary>
+        internal static string MarleReply {
+            get {
+                return ResourceManager.GetString("MarleReply", resourceCulture);
             }
         }
         
@@ -507,6 +631,17 @@ namespace Novel.Properties {
             get {
                 object obj = ResourceManager.GetObject("Robo_right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Robo: Let&apos;s go Crono
+        ///Robo: I want to see how future will change after Lavos death
+        ///Robo: Thanks Crono, you are saver of time and let&apos;s go back.
+        /// </summary>
+        internal static string RoboReply {
+            get {
+                return ResourceManager.GetString("RoboReply", resourceCulture);
             }
         }
         

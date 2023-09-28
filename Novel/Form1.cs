@@ -15,11 +15,16 @@ namespace Novel
 
         int story = 0;
         string? character;
-        Bitmap chronoIcon = Properties.Resources.Crono_icon_Round;
         Bitmap? characterIcon;
         Bitmap? leftcharacterImage;
         Bitmap? rightcharacterImage;
         bool animating = false;
+
+        readonly Bitmap chronoIcon = Properties.Resources.Crono_icon_Round;
+
+        string[] cronoReply = Properties.Resources.CronoReply.Split('\n');
+        string[] characterReply;
+        string[] cronoCharacterReply;
 
         public Form1()
         {
@@ -58,7 +63,10 @@ namespace Novel
             if (animating)
                 return;
 
-            if (story == 0)
+            if (story == 0 ||
+                story == 5 ||
+                story == 7 ||
+                story == 9)
             {
                 await PrintCronoReply();
                 story++;
@@ -66,11 +74,11 @@ namespace Novel
             else if (story == 1)
             {
                 bool on = true;
-                frogPointer.Visible  = on;
-                roboPointer.Visible  = on;
+                frogPointer.Visible = on;
+                roboPointer.Visible = on;
                 marlePointer.Visible = on;
                 magusPointer.Visible = on;
-                aylaPointer.Visible  = on;
+                aylaPointer.Visible = on;
                 luccaPointer.Visible = on;
                 characterIconPicBox.Image = null;
                 animating = true;
@@ -81,11 +89,11 @@ namespace Novel
             else if (story == 2)
             {
                 bool off = false;
-                frogPointer.Visible  = off;
-                roboPointer.Visible  = off;
+                frogPointer.Visible = off;
+                roboPointer.Visible = off;
                 marlePointer.Visible = off;
                 magusPointer.Visible = off;
-                aylaPointer.Visible  = off;
+                aylaPointer.Visible = off;
                 luccaPointer.Visible = off;
                 SetCharacterImages();
                 characterIconPicBox.Image = characterIcon;
@@ -100,173 +108,72 @@ namespace Novel
                 await PrintCronoReply();
                 story++;
             }
-            else if (story == 4 || story == 6)
+            else if (story == 4 ||
+                     story == 6 ||
+                     story == 8 ||
+                     story == 10)
             {
                 await PrintCharacterReply();
                 story++;
             }
-            else if (story == 5)
-            {
-                characterIconPicBox.Image = chronoIcon;
-                await PrintCronoReply();
-                story++;
-            }
-            else if (story == 7)
+            else if (story == 11)
             {
                 story = 0;
                 SetStartScreen();
             }
         }
 
-        private async Task PrintMagusReply()
-        {
-            if (story == 2)
-            {
-                await Print($"Magus: Let's go Crono", characterTextLabel);
-            }
-            else if (story == 4)
-            {
-                await Print("Magus: I plan to return in my time and see what will happen to Kingdom of Zeal", characterTextLabel);
-            }
-            else if (story == 6)
-            {
-                await Print("Magus: Thanks Crono, let's go back", characterTextLabel);
-            }
-        }
-
-        private async Task PrintFrogReply()
-        {
-            if (story == 2)
-            {
-                await Print($"Frog: Let's go Crono", characterTextLabel);
-            }
-            else if (story == 4)
-            {
-                await Print("Frog: I will return to my time and serve my kingdom as Cyrus did ", characterTextLabel);
-            }
-            else if (story == 6)
-            {
-                await Print("Frog: Thanks Crono, you became an amazing swordsman and let's go back we got what we came for", characterTextLabel);
-            }
-        }
-
-        private async Task PrintLuccaReply()
-        {
-            if (story == 2)
-            {
-                await Print($"Lucca: Let's go Crono", characterTextLabel);
-            }
-            else if (story == 4)
-            {
-                await Print("Lucca: When we return to our time, I will keep inventing stuff with my dad to help people", characterTextLabel);
-            }
-            else if (story == 6)
-            {
-                await Print("Lucca: Thanks Crono, hope I will get some help from you with them and let's go back, we got what we needed", characterTextLabel);
-            }
-        }
-
-        private async Task PrintMarleReply()
-        {
-            if (story == 2)
-            {
-                await Print($"Marle: Let's go Crono", characterTextLabel);
-            }
-            else if (story == 4)
-            {
-                await Print("Marle: I want to talk with my father about our adventure and so much more, I need some time to think about it", characterTextLabel);
-            }
-            else if (story == 6)
-            {
-                await Print("Marle: I don't know that you were a moms' boy,  everyone is waiting, so let's go back", characterTextLabel);
-            }
-        }
-
-        private async Task PrintRoboReply()
-        {
-            if (story == 2)
-            {
-                await Print($"Robo: Let's go Crono", characterTextLabel);
-            }
-            else if (story == 4)
-            {
-                await Print("Robo: I want to see how future will change after Lavos death", characterTextLabel);
-            }
-            else if (story == 6)
-            {
-                await Print("Robo: Thanks Crono, you are saver of time and let's go back", characterTextLabel);
-            }
-        }
-
-        private async Task PrintAylaReply()
-        {
-            if (story == 2)
-            {
-                await Print($"Ayla: Ayla wood go", characterTextLabel);
-            }
-            else if (story == 4)
-            {
-                await Print($"Ayla: Ayla go home, Ayla eat, Ayla sleep, Ayla marry Kino, Ayla happy", characterTextLabel);
-            }
-            else if (story == 6)
-            {
-                await Print($"Ayla: Ayla thank Crono, Ayla go back", characterTextLabel);
-            }
-        }
-
         private async Task PrintCharacterReply()
         {
-            Func<Task> printReply = character switch
-            {
-                "Magus" => PrintMagusReply,
-                "Frog" => PrintFrogReply,
-                "Lucca" => PrintLuccaReply,
-                "Marle" => PrintMarleReply,
-                "Robo" => PrintRoboReply,
-                "Ayla" => PrintAylaReply,
-                _ => throw new ArgumentException("Character is not chosen."),
-            };
             characterIconPicBox.Image = characterIcon;
             animating = true;
-            await printReply();
+            if (story == 2)
+            {
+                await Print(characterReply[0], characterTextLabel);
+            }
+            else if (story == 4)
+            {
+                await Print(characterReply[1], characterTextLabel);
+            }
+            else if (story == 6)
+            {
+                await Print(characterReply[2], characterTextLabel);
+            }
+            else if (story == 8)
+            {
+                await Print(characterReply[3], characterTextLabel);
+            }
+            else if (story == 10)
+            {
+                await Print(characterReply[4], characterTextLabel);
+            }
             animating = false;
         }
 
         private async Task PrintCronoReply()
         {
+            characterIconPicBox.Image = chronoIcon;
             animating = true;
             if (story == 0)
             {
-                await Print("Crono: I'll go gather some wood for a campfire, who wants to come with me?", characterTextLabel);
+                await Print(cronoReply[0], characterTextLabel);
             }
             else if (story == 3)
             {
-                await Print($"Crono: Hey {character}, what you plan to do when we finish with Lavos?", characterTextLabel);
+                await Print(cronoCharacterReply[0], characterTextLabel);
 
             }
             else if (story == 5)
             {
-                switch (character)
-                {
-                    case "Magus":
-                        await Print("Crono: I see, hope it'll be okay without Lavos that screwed up your mother", characterTextLabel);
-                        break;
-                    case "Frog":
-                        await Print("Crono: I am glad that you have forgiven yourself and can live your life without regrets", characterTextLabel);
-                        break;
-                    case "Lucca":
-                        await Print("Crono: That's nice, I'll be looking for it", characterTextLabel);
-                        break;
-                    case "Marle":
-                        await Print("Crono: That's nice, I can't wait to see my mom again too", characterTextLabel);
-                        break;
-                    case "Robo":
-                        await Print("Crono: I believe it will be good", characterTextLabel);
-                        break;
-                    case "Ayla":
-                        await Print("Crono: Haha, That`s great", characterTextLabel);
-                        break;
-                }
+                await Print(cronoCharacterReply[1], characterTextLabel);
+            }
+            else if (story == 7)
+            {
+                await Print(cronoCharacterReply[2], characterTextLabel);
+            }
+            else if (story == 9)
+            {
+                await Print(cronoCharacterReply[3], characterTextLabel);
             }
             animating = false;
         }
@@ -292,6 +199,58 @@ namespace Novel
         private async void CharacterPointer_Click(object sender, EventArgs e)
         {
             character = (sender as PictureBox)?.Tag?.ToString();
+
+            characterReply = (sender as PictureBox)?.Tag?.ToString() switch
+            {
+                "Magus" => Properties.Resources.MagusReply.Split('\n'),
+                "Frog" => Properties.Resources.FrogReply.Split('\n'),
+                "Lucca" => Properties.Resources.LuccaReply.Split('\n'),
+                "Marle" => Properties.Resources.MarleReply.Split('\n'),
+                "Robo" => Properties.Resources.RoboReply.Split('\n'),
+                "Ayla" => Properties.Resources.AylaReply.Split('\n'),
+                _ => throw new ArgumentException("Character is not chosen."),
+            };
+            cronoCharacterReply = (sender as PictureBox)?.Tag?.ToString() switch
+            {
+                "Magus" => Properties.Resources.CronoMagusReply.Split('\n'),
+                "Frog" => Properties.Resources.CronoFrogReply.Split('\n'),
+                "Lucca" => Properties.Resources.CronoLuccaReply.Split('\n'),
+                "Marle" => Properties.Resources.CronoMarleReply.Split('\n'),
+                "Robo" => Properties.Resources.CronoRoboReply.Split('\n'),
+                "Ayla" => Properties.Resources.CronoAylaReply.Split('\n'),
+                _ => throw new ArgumentException("Character is not chosen."),
+            };
+
+            //switch ((sender as PictureBox)?.Tag?.ToString())
+            //{
+            //    case "Magus":
+            //        characterReply = Properties.Resources.MagusReply.Split('\n');
+            //        cronoCharacterReply = Properties.Resources.CronoMagusReply.Split('\n');
+            //        break;
+            //     case "Frog" :
+            //        characterReply = Properties.Resources.FrogReply.Split('\n');
+            //        cronoCharacterReply = Properties.Resources.CronoFrogReply.Split('\n');
+            //        break;
+            //     case "Lucca":
+            //        characterReply = Properties.Resources.LuccaReply.Split('\n');
+            //        cronoCharacterReply =  Properties.Resources.CronoLuccaReply.Split('\n');
+            //        break;
+            //     case "Marle":
+            //        characterReply =  Properties.Resources.MarleReply.Split('\n');
+            //        cronoCharacterReply =  Properties.Resources.CronoMarleReply.Split('\n');
+            //         break;
+            //     case "Robo" :
+            //        characterReply =  Properties.Resources.RoboReply.Split('\n');
+            //        cronoCharacterReply =  Properties.Resources.CronoRoboReply.Split('\n');
+            //         break;
+            //     case "Ayla" :
+            //        characterReply =  Properties.Resources.AylaReply.Split('\n');
+            //        cronoCharacterReply =  Properties.Resources.CronoAylaReply.Split('\n');
+            //        break;
+            //    default:
+            //        throw new ArgumentException("Character is not chosen.");
+            //}
+
             await StoryStep();
         }
 
