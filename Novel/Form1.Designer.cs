@@ -107,10 +107,10 @@ namespace Novel
             bottomPanel.TabIndex = 3;
             bottomPanel.Visible = false;
             // 
-            // characterImagePicBox
+            // characterIconPicBox
             // 
             characterIconPicBox.Location = new Point(25, 25);
-            characterIconPicBox.Name = "characterImagePicBox";
+            characterIconPicBox.Name = "characterIconPicBox";
             characterIconPicBox.Size = new Size(75, 75);
             characterIconPicBox.TabIndex = 3;
             characterIconPicBox.TabStop = false;
