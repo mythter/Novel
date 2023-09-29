@@ -148,5 +148,15 @@
                 await Task.Delay(50, token).ContinueWith(tsk => { });
             }
         }
+
+        private void SwitchCharacterPointers(bool boolean)
+        {
+            frogPointer.Visible  = boolean;
+            roboPointer.Visible  = boolean;
+            marlePointer.Visible = boolean;
+            magusPointer.Visible = boolean;
+            aylaPointer.Visible  = boolean;
+            luccaPointer.Visible = boolean;
+        }
     }
 }
