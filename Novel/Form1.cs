@@ -109,5 +109,10 @@ namespace Novel
 
             await StoryStep();
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            cts.Dispose();
+        }
     }
 }

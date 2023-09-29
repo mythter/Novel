@@ -237,6 +237,7 @@ namespace Novel
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Chrono Trigger Campfire";
+            FormClosing += Form1_FormClosing;
             ((System.ComponentModel.ISupportInitialize)backPictureBox).EndInit();
             bottomPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)characterIconPicBox).EndInit();
