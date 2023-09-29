@@ -11,63 +11,67 @@
         string[]? characterReply;
         string[]? cronoCharacterReply;
 
+        CancellationTokenSource? cts;
+
         private async Task StoryStep()
         {
-            if (animating)
-                return;
+            cts?.Cancel();
 
             if (story == 0 ||
                 story == 5 ||
                 story == 7 ||
                 story == 9)
             {
-                await PrintCronoReply();
                 story++;
+                cts = new CancellationTokenSource();
+                await PrintCronoReply();
             }
             else if (story == 1)
             {
+                story++;
                 bool on = true;
-                frogPointer.Visible = on;
-                roboPointer.Visible = on;
+                frogPointer.Visible  = on;
+                roboPointer.Visible  = on;
                 marlePointer.Visible = on;
                 magusPointer.Visible = on;
-                aylaPointer.Visible = on;
+                aylaPointer.Visible  = on;
                 luccaPointer.Visible = on;
                 characterIconPicBox.Image = null;
-                animating = true;
-                await Print("Choose character", characterTextLabel);
-                animating = false;
-                story++;
+                cts = new CancellationTokenSource();
+                await PrintAsync("Choose character", characterTextLabel, cts.Token);
             }
             else if (story == 2)
             {
+                story++;
                 bool off = false;
-                frogPointer.Visible = off;
-                roboPointer.Visible = off;
+                frogPointer.Visible  = off;
+                roboPointer.Visible  = off;
                 marlePointer.Visible = off;
                 magusPointer.Visible = off;
-                aylaPointer.Visible = off;
+                aylaPointer.Visible  = off;
                 luccaPointer.Visible = off;
                 SetCharacterImages();
                 characterIconPicBox.Image = characterIcon;
+                cts = new CancellationTokenSource();
                 await PrintCharacterReply();
-                story++;
             }
             else if (story == 3)
             {
+                story++;
                 backPictureBox.Image = Properties.Resources.Scene_2_Normal;
                 SetSideCharacters();
                 characterIconPicBox.Image = chronoIcon;
+                cts = new CancellationTokenSource();
                 await PrintCronoReply();
-                story++;
             }
             else if (story == 4 ||
                      story == 6 ||
                      story == 8 ||
                      story == 10)
             {
-                await PrintCharacterReply();
                 story++;
+                cts = new CancellationTokenSource();
+                await PrintCharacterReply();
             }
             else if (story == 11)
             {
@@ -79,69 +83,73 @@
         private async Task PrintCharacterReply()
         {
             characterIconPicBox.Image = characterIcon;
-            animating = true;
-            if (story == 2)
+            if (story == 3)
             {
-                await Print(characterReply?[0], characterTextLabel);
+                await PrintAsync(characterReply?[0], characterTextLabel, cts.Token);
             }
-            else if (story == 4)
+            else if (story == 5)
             {
-                await Print(characterReply?[1], characterTextLabel);
+                await PrintAsync(characterReply?[1], characterTextLabel, cts.Token);
             }
-            else if (story == 6)
+            else if (story == 7)
             {
-                await Print(characterReply?[2], characterTextLabel);
+                await PrintAsync(characterReply?[2], characterTextLabel, cts.Token);
             }
-            else if (story == 8)
+            else if (story == 9)
             {
-                await Print(characterReply?[3], characterTextLabel);
+                await PrintAsync(characterReply?[3], characterTextLabel, cts.Token);
             }
-            else if (story == 10)
+            else if (story == 11)
             {
-                await Print(characterReply?[4], characterTextLabel);
+                await PrintAsync(characterReply?[4], characterTextLabel, cts.Token);
             }
-            animating = false;
         }
 
         private async Task PrintCronoReply()
         {
             characterIconPicBox.Image = chronoIcon;
-            animating = true;
-            if (story == 0)
+            if (story == 1)
             {
-                await Print(cronoReply[0], characterTextLabel);
+                await PrintAsync(cronoReply[0], characterTextLabel, cts.Token);
             }
-            else if (story == 3)
+            else if (story == 4)
             {
-                await Print(cronoCharacterReply?[0], characterTextLabel);
+                await PrintAsync(cronoCharacterReply?[0], characterTextLabel, cts.Token);
 
             }
-            else if (story == 5)
+            else if (story == 6)
             {
-                await Print(cronoCharacterReply?[1], characterTextLabel);
+                await PrintAsync(cronoCharacterReply?[1], characterTextLabel, cts.Token);
             }
-            else if (story == 7)
+            else if (story == 8)
             {
-                await Print(cronoCharacterReply?[2], characterTextLabel);
+                await PrintAsync(cronoCharacterReply?[2], characterTextLabel, cts.Token);
             }
-            else if (story == 9)
+            else if (story == 10)
             {
-                await Print(cronoCharacterReply?[3], characterTextLabel);
+                await PrintAsync(cronoCharacterReply?[3], characterTextLabel, cts.Token);
             }
-            animating = false;
         }
 
-        private async Task Print(string? text, Label output)
+        private async Task PrintAsync(string? text, Label output, CancellationToken token)
         {
             if (output is null || text is null)
                 return;
 
             output.Text = "";
+            animating = true;
             foreach (var ch in text)
             {
+                if (token.IsCancellationRequested)
+                {
+                    animating = false;
+                    output.Text = "";
+                    return;
+                }
                 output.Text += ch;
-                await Task.Delay(50);
+                await Task.Delay(50, token).ContinueWith(tsk => { });
             }
+            animating = false;
         }
     }
 }
