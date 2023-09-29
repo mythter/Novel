@@ -5,17 +5,16 @@
         int story = 0;
         string? character;
 
-        bool animating = false;
-
         string[] cronoReply = Properties.Resources.CronoReply.Split('\n');
         string[]? characterReply;
         string[]? cronoCharacterReply;
 
-        CancellationTokenSource? cts;
+        CancellationTokenSource cts;
 
         private async Task StoryStep()
         {
-            cts?.Cancel();
+            if (story != 2)
+                cts?.Cancel();
 
             if (story == 0 ||
                 story == 5 ||
@@ -40,7 +39,7 @@
                 cts = new CancellationTokenSource();
                 await PrintAsync("Choose character", characterTextLabel, cts.Token);
             }
-            else if (story == 2)
+            else if (story == 2 && !string.IsNullOrEmpty(character))
             {
                 story++;
                 bool off = false;
@@ -76,6 +75,7 @@
             else if (story == 11)
             {
                 story = 0;
+                character = string.Empty;
                 SetStartScreen();
             }
         }
@@ -137,19 +137,16 @@
                 return;
 
             output.Text = "";
-            animating = true;
+            await Task.Delay(50, token).ContinueWith(tsk => { });
             foreach (var ch in text)
             {
                 if (token.IsCancellationRequested)
                 {
-                    animating = false;
-                    output.Text = "";
                     return;
                 }
                 output.Text += ch;
                 await Task.Delay(50, token).ContinueWith(tsk => { });
             }
-            animating = false;
         }
     }
 }

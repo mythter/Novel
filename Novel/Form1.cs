@@ -18,6 +18,8 @@ namespace Novel
             InitializeComponent();
             SetTransperency();
 
+            cts = new CancellationTokenSource();
+
             #region Custom font
             byte[] fontData = Properties.Resources.ChronoType;
             IntPtr fontPtr = System.Runtime.InteropServices.Marshal.AllocCoTaskMem(fontData.Length);
