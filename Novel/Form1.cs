@@ -30,7 +30,7 @@ namespace Novel
             System.Runtime.InteropServices.Marshal.FreeCoTaskMem(fontPtr);
 
             ChronoTypeFontRegular = new Font(fonts.Families[0], 14.0F);
-            characterTextLabel.Font = ChronoTypeFontRegular;
+            characterPanel.Font = ChronoTypeFontRegular;
             ChronoTypeFontRegular = new Font(fonts.Families[0], 40.0F);
             startLabel.Font = ChronoTypeFontRegular;
             #endregion
@@ -41,8 +41,8 @@ namespace Novel
             backPictureBox.Image = Properties.Resources.Scene_1_Normal;
             startLabel.Visible = false;
 
-            bottomPanel.Visible = true;
-            characterIconPicBox.Image = Properties.Resources.Crono_icon_Round;
+            characterPanel.Visible = true;
+            characterPanel.Image = Properties.Resources.Crono_icon_Round;
 
             await StoryStep();
         }

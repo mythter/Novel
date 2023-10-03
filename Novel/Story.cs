@@ -29,16 +29,16 @@
             {
                 story++;
                 SwitchCharacterPointers(true);
-                characterIconPicBox.Image = null;
+                characterPanel.Image = null;
                 cts = new CancellationTokenSource();
-                await PrintAsync("Choose character", characterTextLabel, cts.Token);
+                await PrintAsync("Choose character", cts.Token);
             }
             else if (story == 2 && !string.IsNullOrEmpty(character))
             {
                 story++;
                 SwitchCharacterPointers(false);
                 SetCharacterImages();
-                characterIconPicBox.Image = characterIcon;
+                characterPanel.Image = characterIcon;
                 cts = new CancellationTokenSource();
                 await PrintCharacterReply();
             }
@@ -47,7 +47,7 @@
                 story++;
                 backPictureBox.Image = Properties.Resources.Scene_2_Normal;
                 SetSideCharacters();
-                characterIconPicBox.Image = chronoIcon;
+                characterPanel.Image = chronoIcon;
                 cts = new CancellationTokenSource();
                 await PrintCronoReply();
             }
@@ -70,61 +70,61 @@
 
         private async Task PrintCharacterReply()
         {
-            characterIconPicBox.Image = characterIcon;
+            characterPanel.Image = characterIcon;
             if (story == 3)
             {
-                await PrintAsync(characterReply?[0], characterTextLabel, cts.Token);
+                await PrintAsync(characterReply?[0], cts.Token);
             }
             else if (story == 5)
             {
-                await PrintAsync(characterReply?[1], characterTextLabel, cts.Token);
+                await PrintAsync(characterReply?[1], cts.Token);
             }
             else if (story == 7)
             {
-                await PrintAsync(characterReply?[2], characterTextLabel, cts.Token);
+                await PrintAsync(characterReply?[2], cts.Token);
             }
             else if (story == 9)
             {
-                await PrintAsync(characterReply?[3], characterTextLabel, cts.Token);
+                await PrintAsync(characterReply?[3], cts.Token);
             }
             else if (story == 11)
             {
-                await PrintAsync(characterReply?[4], characterTextLabel, cts.Token);
+                await PrintAsync(characterReply?[4], cts.Token);
             }
         }
 
         private async Task PrintCronoReply()
         {
-            characterIconPicBox.Image = chronoIcon;
+            characterPanel.Image = chronoIcon;
             if (story == 1)
             {
-                await PrintAsync(cronoReply[0], characterTextLabel, cts.Token);
+                await PrintAsync(cronoReply[0], cts.Token);
             }
             else if (story == 4)
             {
-                await PrintAsync(cronoCharacterReply?[0], characterTextLabel, cts.Token);
+                await PrintAsync(cronoCharacterReply?[0], cts.Token);
 
             }
             else if (story == 6)
             {
-                await PrintAsync(cronoCharacterReply?[1], characterTextLabel, cts.Token);
+                await PrintAsync(cronoCharacterReply?[1], cts.Token);
             }
             else if (story == 8)
             {
-                await PrintAsync(cronoCharacterReply?[2], characterTextLabel, cts.Token);
+                await PrintAsync(cronoCharacterReply?[2], cts.Token);
             }
             else if (story == 10)
             {
-                await PrintAsync(cronoCharacterReply?[3], characterTextLabel, cts.Token);
+                await PrintAsync(cronoCharacterReply?[3], cts.Token);
             }
         }
 
-        private async Task PrintAsync(string? text, Label output, CancellationToken token)
+        private async Task PrintAsync(string? text, CancellationToken token)
         {
-            if (output is null || text is null)
+            if (text is null)
                 return;
 
-            output.Text = "";
+            characterPanel.Reply = "";
             await Task.Delay(50, token).ContinueWith(tsk => { });
             foreach (var ch in text)
             {
@@ -132,7 +132,7 @@
                 {
                     return;
                 }
-                output.Text += ch;
+                characterPanel.Reply += ch;
                 await Task.Delay(50, token).ContinueWith(tsk => { });
             }
         }

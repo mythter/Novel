@@ -33,10 +33,6 @@ namespace Novel
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             backPictureBox = new PictureBox();
             startLabel = new Label();
-            characterTextLabel = new Label();
-            bottomPanel = new Panel();
-            characterIconPicBox = new PictureBox();
-            backgroudTextPicBox = new PictureBox();
             leftPictureBox = new PictureBox();
             rightPictureBox = new PictureBox();
             roboPointer = new PictureBox();
@@ -45,10 +41,8 @@ namespace Novel
             marlePointer = new PictureBox();
             aylaPointer = new PictureBox();
             magusPointer = new PictureBox();
+            characterPanel = new Controls.CharacterPanel();
             ((System.ComponentModel.ISupportInitialize)backPictureBox).BeginInit();
-            bottomPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)characterIconPicBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)backgroudTextPicBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)leftPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)roboPointer).BeginInit();
@@ -82,47 +76,6 @@ namespace Novel
             startLabel.TabIndex = 1;
             startLabel.Text = "Start";
             startLabel.Click += startLabel_Click;
-            // 
-            // characterTextLabel
-            // 
-            characterTextLabel.Font = new Font("ChronoType", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            characterTextLabel.ForeColor = SystemColors.Control;
-            characterTextLabel.Location = new Point(106, 0);
-            characterTextLabel.Name = "characterTextLabel";
-            characterTextLabel.Padding = new Padding(10, 0, 10, 0);
-            characterTextLabel.Size = new Size(494, 125);
-            characterTextLabel.TabIndex = 2;
-            characterTextLabel.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // bottomPanel
-            // 
-            bottomPanel.Anchor = AnchorStyles.Bottom;
-            bottomPanel.BackColor = Color.Transparent;
-            bottomPanel.Controls.Add(characterIconPicBox);
-            bottomPanel.Controls.Add(characterTextLabel);
-            bottomPanel.Controls.Add(backgroudTextPicBox);
-            bottomPanel.Location = new Point(200, 475);
-            bottomPanel.Name = "bottomPanel";
-            bottomPanel.Size = new Size(600, 125);
-            bottomPanel.TabIndex = 3;
-            bottomPanel.Visible = false;
-            // 
-            // characterIconPicBox
-            // 
-            characterIconPicBox.Location = new Point(25, 25);
-            characterIconPicBox.Name = "characterIconPicBox";
-            characterIconPicBox.Size = new Size(75, 75);
-            characterIconPicBox.TabIndex = 3;
-            characterIconPicBox.TabStop = false;
-            // 
-            // backgroudTextPicBox
-            // 
-            backgroudTextPicBox.Image = Properties.Resources.background;
-            backgroudTextPicBox.Location = new Point(0, 0);
-            backgroudTextPicBox.Name = "backgroudTextPicBox";
-            backgroudTextPicBox.Size = new Size(600, 125);
-            backgroudTextPicBox.TabIndex = 5;
-            backgroudTextPicBox.TabStop = false;
             // 
             // leftPictureBox
             // 
@@ -215,11 +168,22 @@ namespace Novel
             magusPointer.Visible = false;
             magusPointer.Click += CharacterPointer_Click;
             // 
+            // characterPanel
+            // 
+            characterPanel.BackgroundImage = (Image)resources.GetObject("characterPanel.BackgroundImage");
+            characterPanel.Image = null;
+            characterPanel.Location = new Point(200, 475);
+            characterPanel.Name = "characterPanel";
+            characterPanel.Reply = "";
+            characterPanel.Size = new Size(600, 125);
+            characterPanel.TabIndex = 12;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1000, 600);
+            Controls.Add(characterPanel);
             Controls.Add(magusPointer);
             Controls.Add(aylaPointer);
             Controls.Add(marlePointer);
@@ -228,7 +192,6 @@ namespace Novel
             Controls.Add(roboPointer);
             Controls.Add(rightPictureBox);
             Controls.Add(leftPictureBox);
-            Controls.Add(bottomPanel);
             Controls.Add(startLabel);
             Controls.Add(backPictureBox);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -239,9 +202,6 @@ namespace Novel
             Text = "Chrono Trigger Campfire";
             FormClosing += Form1_FormClosing;
             ((System.ComponentModel.ISupportInitialize)backPictureBox).EndInit();
-            bottomPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)characterIconPicBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)backgroudTextPicBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)leftPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)rightPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)roboPointer).EndInit();
@@ -258,10 +218,6 @@ namespace Novel
 
         private PictureBox backPictureBox;
         private Label startLabel;
-        private Label characterTextLabel;
-        private Panel bottomPanel;
-        private PictureBox characterIconPicBox;
-        private PictureBox backgroudTextPicBox;
         private PictureBox leftPictureBox;
         private PictureBox rightPictureBox;
         private PictureBox roboPointer;
@@ -270,5 +226,6 @@ namespace Novel
         private PictureBox marlePointer;
         private PictureBox aylaPointer;
         private PictureBox magusPointer;
+        private Controls.CharacterPanel characterPanel;
     }
 }

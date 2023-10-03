@@ -68,31 +68,13 @@
                 startLabel.BackColor = Color.Transparent;
             }
 
-            if (bottomPanel?.Parent is not null)
+            if (characterPanel?.Parent is not null)
             {
-                pos = bottomPanel.Parent.PointToScreen(bottomPanel.Location);
+                pos = characterPanel.Parent.PointToScreen(characterPanel.Location);
                 pos = backPictureBox.PointToClient(pos);
-                bottomPanel.Parent = backPictureBox;
-                bottomPanel.Location = pos;
-                bottomPanel.BackColor = Color.Transparent;
-            }
-
-            if (characterTextLabel?.Parent is not null)
-            {
-                pos = characterTextLabel.Parent.PointToScreen(characterTextLabel.Location);
-                pos = backgroudTextPicBox.PointToClient(pos);
-                characterTextLabel.Parent = backgroudTextPicBox;
-                characterTextLabel.Location = pos;
-                characterTextLabel.BackColor = Color.Transparent;
-            }
-
-            if (characterIconPicBox?.Parent is not null)
-            {
-                pos = characterIconPicBox.Parent.PointToScreen(characterIconPicBox.Location);
-                pos = backgroudTextPicBox.PointToClient(pos);
-                characterIconPicBox.Parent = backgroudTextPicBox;
-                characterIconPicBox.Location = pos;
-                characterIconPicBox.BackColor = Color.Transparent;
+                characterPanel.Parent = backPictureBox;
+                characterPanel.Location = pos;
+                characterPanel.BackColor = Color.Transparent;
             }
 
             if (leftPictureBox?.Parent is not null)
@@ -172,7 +154,7 @@
         {
             rightPictureBox.Visible = false;
             leftPictureBox.Visible = false;
-            bottomPanel.Visible = false;
+            characterPanel.Visible = false;
             backPictureBox.Image = Properties.Resources.Title_Screen_Normal;
             startLabel.Visible = true;
         }
