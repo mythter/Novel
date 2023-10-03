@@ -9,26 +9,14 @@
 
         public string Reply
         {
-            get
-            {
-                return characterTextLabel.Text;
-            }
-            set
-            {
-                characterTextLabel.Text = value;
-            }
+            get => characterTextLabel.Text;
+            set => characterTextLabel.Text = value;
         }
 
         public Image Image
         {
-            get
-            {
-                return characterIconPicBox.Image;
-            }
-            set
-            {
-                characterIconPicBox.Image = value;
-            }
+            get => characterIconPicBox.Image;
+            set => characterIconPicBox.Image = value;
         }
     }
 }
