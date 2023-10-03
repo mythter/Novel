@@ -28,13 +28,7 @@
             else if (story == 1)
             {
                 story++;
-                bool on = true;
-                frogPointer.Visible  = on;
-                roboPointer.Visible  = on;
-                marlePointer.Visible = on;
-                magusPointer.Visible = on;
-                aylaPointer.Visible  = on;
-                luccaPointer.Visible = on;
+                SwitchCharacterPointers(true);
                 characterIconPicBox.Image = null;
                 cts = new CancellationTokenSource();
                 await PrintAsync("Choose character", characterTextLabel, cts.Token);
@@ -42,13 +36,7 @@
             else if (story == 2 && !string.IsNullOrEmpty(character))
             {
                 story++;
-                bool off = false;
-                frogPointer.Visible  = off;
-                roboPointer.Visible  = off;
-                marlePointer.Visible = off;
-                magusPointer.Visible = off;
-                aylaPointer.Visible  = off;
-                luccaPointer.Visible = off;
+                SwitchCharacterPointers(false);
                 SetCharacterImages();
                 characterIconPicBox.Image = characterIcon;
                 cts = new CancellationTokenSource();
