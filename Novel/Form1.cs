@@ -80,36 +80,6 @@ namespace Novel
                 _ => throw new ArgumentException("Character is not chosen."),
             };
 
-            //switch ((sender as PictureBox)?.Tag?.ToString())
-            //{
-            //    case "Magus":
-            //        characterReply = Properties.Resources.MagusReply.Split('\n');
-            //        cronoCharacterReply = Properties.Resources.CronoMagusReply.Split('\n');
-            //        break;
-            //     case "Frog" :
-            //        characterReply = Properties.Resources.FrogReply.Split('\n');
-            //        cronoCharacterReply = Properties.Resources.CronoFrogReply.Split('\n');
-            //        break;
-            //     case "Lucca":
-            //        characterReply = Properties.Resources.LuccaReply.Split('\n');
-            //        cronoCharacterReply =  Properties.Resources.CronoLuccaReply.Split('\n');
-            //        break;
-            //     case "Marle":
-            //        characterReply =  Properties.Resources.MarleReply.Split('\n');
-            //        cronoCharacterReply =  Properties.Resources.CronoMarleReply.Split('\n');
-            //         break;
-            //     case "Robo" :
-            //        characterReply =  Properties.Resources.RoboReply.Split('\n');
-            //        cronoCharacterReply =  Properties.Resources.CronoRoboReply.Split('\n');
-            //         break;
-            //     case "Ayla" :
-            //        characterReply =  Properties.Resources.AylaReply.Split('\n');
-            //        cronoCharacterReply =  Properties.Resources.CronoAylaReply.Split('\n');
-            //        break;
-            //    default:
-            //        throw new ArgumentException("Character is not chosen.");
-            //}
-
             await StoryStep();
         }
 

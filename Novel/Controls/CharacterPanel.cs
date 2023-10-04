@@ -13,7 +13,7 @@
             set => characterTextLabel.Text = value;
         }
 
-        public Image Image
+        public Image? Image
         {
             get => characterIconPicBox.Image;
             set => characterIconPicBox.Image = value;
