@@ -49,7 +49,10 @@ namespace Novel
 
         private async void backPictureBox_Click(object sender, EventArgs e)
         {
-            await StoryStep();
+            if (story != 0)
+            {
+                await StoryStep();
+            }
         }
 
         private async void CharacterPointer_Click(object sender, EventArgs e)
