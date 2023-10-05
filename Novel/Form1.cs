@@ -1,3 +1,4 @@
+using Novel.Models;
 using System.Drawing.Text;
 
 namespace Novel
@@ -57,19 +58,23 @@ namespace Novel
 
         private async void CharacterPointer_Click(object sender, EventArgs e)
         {
-            character = (sender as PictureBox)?.Tag?.ToString();
+            string? name = (sender as PictureBox)?.Tag?.ToString();
 
-            characterReply = (sender as PictureBox)?.Tag?.ToString() switch
+            character = new Character(name ?? "")
             {
-                "Magus" => Properties.Resources.MagusReply.Split('\n'),
-                "Frog" => Properties.Resources.FrogReply.Split('\n'),
-                "Lucca" => Properties.Resources.LuccaReply.Split('\n'),
-                "Marle" => Properties.Resources.MarleReply.Split('\n'),
-                "Robo" => Properties.Resources.RoboReply.Split('\n'),
-                "Ayla" => Properties.Resources.AylaReply.Split('\n'),
-                _ => throw new ArgumentException("Character is not chosen."),
+                Replies = name switch
+                {
+                    "Magus" => Properties.Resources.MagusReply.Split('\n'),
+                    "Frog" => Properties.Resources.FrogReply.Split('\n'),
+                    "Lucca" => Properties.Resources.LuccaReply.Split('\n'),
+                    "Marle" => Properties.Resources.MarleReply.Split('\n'),
+                    "Robo" => Properties.Resources.RoboReply.Split('\n'),
+                    "Ayla" => Properties.Resources.AylaReply.Split('\n'),
+                    _ => throw new ArgumentException("Character is not chosen."),
+                }
             };
-            cronoCharacterReply = (sender as PictureBox)?.Tag?.ToString() switch
+
+            crono.Replies = (sender as PictureBox)?.Tag?.ToString() switch
             {
                 "Magus" => Properties.Resources.CronoMagusReply.Split('\n'),
                 "Frog" => Properties.Resources.CronoFrogReply.Split('\n'),

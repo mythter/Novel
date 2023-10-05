@@ -2,11 +2,6 @@
 {
     public partial class Form1
     {
-        Bitmap? characterIcon;
-        Bitmap? leftcharacterImage;
-        Bitmap? rightcharacterImage;
-        Bitmap chronoIcon = Properties.Resources.Crono_icon_Round;
-
         private void SetSideCharacters()
         {
             Random rand = new Random();
@@ -14,45 +9,8 @@
             leftPictureBox.Visible = true;
             int choice = rand.Next(2);
 
-            leftPictureBox.Image = choice == 0 ? Properties.Resources.Crono_left : leftcharacterImage;
-            rightPictureBox.Image = choice == 0 ? rightcharacterImage : Properties.Resources.Crono_right;
-        }
-
-        private void SetCharacterImages()
-        {
-            switch (character)
-            {
-                case "Magus":
-                    characterIcon = Properties.Resources.Magus_icon_Round;
-                    leftcharacterImage = Properties.Resources.Magus_left;
-                    rightcharacterImage = Properties.Resources.Magus_right;
-                    break;
-                case "Frog":
-                    characterIcon = Properties.Resources.Frog_icon_Round;
-                    leftcharacterImage = Properties.Resources.Frog_left;
-                    rightcharacterImage = Properties.Resources.Frog_right;
-                    break;
-                case "Lucca":
-                    characterIcon = Properties.Resources.Lucca_icon_Round;
-                    leftcharacterImage = Properties.Resources.Lucca_left;
-                    rightcharacterImage = Properties.Resources.Lucca_right;
-                    break;
-                case "Marle":
-                    characterIcon = Properties.Resources.Marle_icon_Round;
-                    leftcharacterImage = Properties.Resources.Marle_left;
-                    rightcharacterImage = Properties.Resources.Marle_right;
-                    break;
-                case "Robo":
-                    characterIcon = Properties.Resources.Robo_icon_Round;
-                    leftcharacterImage = Properties.Resources.Robo_left;
-                    rightcharacterImage = Properties.Resources.Robo_right;
-                    break;
-                case "Ayla":
-                    characterIcon = Properties.Resources.Ayla_icon_Round;
-                    leftcharacterImage = Properties.Resources.Ayla_left;
-                    rightcharacterImage = Properties.Resources.Ayla_right;
-                    break;
-            }
+            leftPictureBox.Image = choice == 0 ? Properties.Resources.Crono_left : character?.LeftImage;
+            rightPictureBox.Image = choice == 0 ? character?.RightImage : Properties.Resources.Crono_right;
         }
 
         private void SetTransperency()
