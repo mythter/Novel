@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Novel.Models
+﻿namespace Novel.Models
 {
     public class Character
     {
-        public string Name { get; private set; }
+        public string Name { get; }
         public Bitmap Icon { get; private set; }
         public Bitmap LeftImage { get; private set; }
         public Bitmap RightImage { get; private set; }
